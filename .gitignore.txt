@@ -24,6 +24,7 @@
 
 # Compiled class file
 *.class
+*.settings
 
 # IntelliJ
 out/
