@@ -1,7 +1,7 @@
 public class Client extends User {
     //properties
     private float budget;
-    private String what_i_want;
+    private String whatIWant;
 
     private String name;
 
@@ -9,58 +9,71 @@ public class Client extends User {
 
     private int id;
 
+    //client constructor
+    public Client(String name, String lastname, int id, float budget, String whatIWant) {
+        super(name, lastname, id);
+        this.budget = budget;
+        this.whatIWant = whatIWant;
+    }
+
     //setters and getters
 
-    public void setBudget(int value) {
-        this.budget = value;
-    }
 
     public float getBudget() {
-        return this.budget;
+        return budget;
     }
 
-    public void setWhat_i_want(String type_of_building) {
-        this.what_i_want = type_of_building;
+    public void setBudget(float budget) {
+        this.budget = budget;
     }
 
-    public String getWhat_i_want() {
-        return this.what_i_want;
+    public String getWhatIWant() {
+        return whatIWant;
     }
 
-    public void setName(String Name) {
-        this.name = Name;
+    public void setWhatIWant(String whatIWant) {
+        this.whatIWant = whatIWant;
     }
 
+    @Override
     public String getName() {
-        return this.name;
+        return name;
     }
 
-    public void setLastname(String Lastname) {
-        this.lastname = Lastname;
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 
+    @Override
     public String getLastname() {
-        return this.lastname;
+        return lastname;
     }
 
-    public void setId(int Id) {
-        this.id = Id;
+    @Override
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
+    @Override
     public int getId() {
-        return this.id;
+        return id;
     }
 
-    //client constructor
-    public Client(String Name, String Lastname, int Id) {
-        this.name = Name;
-        this.lastname = Lastname;
-        this.id = Id;
+    @Override
+    public void setId(int id) {
+        this.id = id;
     }
 
     //method
-    public BuildingOrder create_building_order(String type_of_building) {
-        BuildingOrder order = new BuildingOrder(type_of_building);
-        return order;
+//    public String buildingNeeds(int floors,String material){
+//
+//    }
+    public Boolean acceptsOffer() {
+        return true;
+    }
+
+    public Boolean declinesOffer() {
+        return false;
     }
 }

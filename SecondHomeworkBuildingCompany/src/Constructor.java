@@ -1,49 +1,35 @@
 public class Constructor extends User {
     //properties
     private String charge;
-    private String what_to_build;
+    private String whatToBuild;
+
+    public String getCharge() {
+        return charge;
+    }
+
+    //constructor
+    public Constructor(String name, String lastname, int id, String charge, String whatToBuild) {
+        super(name, lastname, id);
+        this.charge = charge;
+        this.whatToBuild = whatToBuild;
+
+    }
 
     public void setCharge(String charge) {
         this.charge = charge;
     }
 
-    public String getCharge() {
-        return this.charge;
+    public String getWhatToBuild() {
+        return whatToBuild;
     }
 
-    public void setWhat_to_build(String type) {
-        this.what_to_build = type;
-    }
-
-    public String getWhat_to_build() {
-        return this.what_to_build;
-    }
-
-    //constructor
-    public Constructor() {
-
+    public void setWhatToBuild(String whatToBuild) {
+        this.whatToBuild = whatToBuild;
     }
 
     //methods
-    public Hotel create_new_hotel() {
-        Hotel hotel = new Hotel();
-        return hotel;
+    public void startConstruccion(String whatToBuild) {
+        System.out.println("The construccion of the " + whatToBuild + " has started");
     }
-
-    public Office create_new_office() {
-        Office office = new Office();
-        return office;
-    }
-
-    public Shopping create_new_shopping() {
-        Shopping shopping = new Shopping();
-        return shopping;
-    }
-
-    public Hospital create_new_hospital() {
-        Hospital hospital = new Hospital();
-        return hospital;
-    }
-
 
 }

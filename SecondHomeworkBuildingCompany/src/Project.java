@@ -1,32 +1,40 @@
 public class Project {
     //properties
     private String status;
-    private String Type_of_building;
+    private String typeOfBuilding;
     private int id;
 
-    //getters and setters
-    public void setStatus(String Status) {
-        this.status = Status;
+    //constructor
+    public Project(String status, String typeOfBuilding, int id) {
+        this.status = status;
+        this.typeOfBuilding = typeOfBuilding;
+        this.id = id;
     }
+
+    //getters and setters
+
 
     public String getStatus() {
-        return this.status;
+        return status;
     }
 
-    public void setType_of_building(String Type_of_building) {
-        this.Type_of_building = Type_of_building;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public String getType_of_building() {
-        return this.Type_of_building;
+    public String getTypeOfBuilding() {
+        return typeOfBuilding;
     }
 
-    public void setId(int Id) {
-        this.id = Id;
+    public void setTypeOfBuilding(String typeOfBuilding) {
+        this.typeOfBuilding = typeOfBuilding;
     }
 
     public int getId() {
-        return this.id;
+        return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 }
