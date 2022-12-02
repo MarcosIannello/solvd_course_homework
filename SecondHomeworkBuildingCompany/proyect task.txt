@@ -1,0 +1,65 @@
+Building company (How long and how much it will cost to me to build a different types of buildings)
+
+10 classes.
+
+Abstract class Building
+- material : str
+- floors : int
+- address: str
+- owner : str (client)
+- estimated time : int
+- status : str
+- cost : float
+
+:Hospital
+- type : str
+- capacity: int
+
+:Hotel
+- type : str
+- number_of_rooms: int
+
+:Apartment Building
+- type : str
+- id : int
+
+:Shopping
+- type :str
+- number_of_locals: int
+
+
+Abstract class User
+- name: str
+- lastname: str
+- id: int
+
+
+: Client
+- budget: int
+- what_i_want : string
++ create_building_order()
+
+: Constructor
+-charge: str
+-what_to_build: str
++create_new_building()
+
+Building order
+- in_charge: str (Constructor)
+- id_order: int
+- type_of_building : str
+- owner: str (client)
+
+Project
+- status : str
+- type_of_building: str
+- id : int
+- budget: float
+
+
+
+
+
+
+
+
