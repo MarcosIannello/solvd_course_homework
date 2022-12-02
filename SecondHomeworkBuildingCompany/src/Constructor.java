@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Constructor extends User {
     //properties
     private String charge;
@@ -32,4 +34,24 @@ public class Constructor extends User {
         System.out.println("The construccion of the " + whatToBuild + " has started");
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Constructor)) return false;
+        Constructor that = (Constructor) o;
+        return getCharge().equals(that.getCharge());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCharge());
+    }
+
+    @Override
+    public String toString() {
+        return "Constructor{" +
+                "charge='" + charge + '\'' +
+                ", name=" + getName() +
+                '}';
+    }
 }

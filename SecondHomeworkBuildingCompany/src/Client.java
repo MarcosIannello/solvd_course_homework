@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Client extends User {
     //properties
     private float budget;
@@ -75,5 +77,27 @@ public class Client extends User {
 
     public Boolean declinesOffer() {
         return false;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Client)) return false;
+        Client client = (Client) o;
+        return getId() == client.getId() && getName().equals(client.getName()) && getLastname().equals(client.getLastname());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getLastname(), getId());
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

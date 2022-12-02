@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Building {
 
     private boolean status;
@@ -5,6 +7,8 @@ public abstract class Building {
     private String material;
     private String address;
     private String owner;
+    private float estimatedTime;
+    private float cost;
 
     //constructor
 
@@ -74,7 +78,27 @@ public abstract class Building {
         this.cost = cost;
     }
 
-    private float estimatedTime;
-    private float cost;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Building)) return false;
+        Building building = (Building) o;
+        return getFloors() == building.getFloors() && getMaterial().equals(building.getMaterial());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getFloors(), getMaterial());
+    }
+
+    @Override
+    public String toString() {
+        return "Building{" +
+                "floors=" + floors +
+                ", material='" + material + '\'' +
+                ", address='" + address + '\'' +
+                ", owner='" + owner + '\'' +
+                '}';
+    }
 }
 
